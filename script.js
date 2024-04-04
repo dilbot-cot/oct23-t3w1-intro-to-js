@@ -56,3 +56,24 @@ console.log(`The class' favourite fruits are ${favouriteFruits}`);
 let sortedFavouriteFruits = favouriteFruits.sort()
 
 console.log(sortedFavouriteFruits)
+
+let dillon = {
+    name: "dillon",
+    codingLanguages: [
+        "C#",
+        "JavaScript",
+        "HTML",
+        "CSS"
+    ],
+    hobbies: [
+        {
+            name: "Computer Games",
+            skill: 100
+        },
+        {
+            name: "DocuSign",
+            favouriteOption: ["Web Forms", "Templates"],
+            skill: 1000
+        }
+    ]
+}
