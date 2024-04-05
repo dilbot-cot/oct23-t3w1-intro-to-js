@@ -1,3 +1,4 @@
+function hideContent() {
 // // let is a local scope
 // let exampleEmptyVariable = null;
 // let anotherEmptyVariable = undefined;
@@ -77,3 +78,53 @@ let dillon = {
         }
     ]
 }
+}
+
+let pokemonTeam = [
+    "pikachu",
+    "squirtle",
+    "charmander",
+    "mew"
+];
+
+function logTheTeam() {
+    sortedTeam = pokemonTeam.sort();
+
+    // for (const pokemon of sortedTeam) {
+    //     console.log(pokemon);
+    // }
+
+    // sortedTeam.forEach(pokemon => {
+    //     console.log(pokemon)
+    // });
+
+    // let [firstPokemon, secondPokemon, ...others] = sortedTeam;
+    // console.log(secondPokemon);
+
+    // while (sortedTeam.length){
+    //     console.log(sortedTeam.pop());
+    // }
+
+    do {
+        console.log(sortedTeam.pop())
+    } while (sortedTeam.length);
+
+    sortedTeam.push("blastoise");
+
+    for (let index = 0; index < sortedTeam.length; index++) {
+        console.log("Pokemon at index " + index + " is " + sortedTeam[index]);
+    }
+}
+
+// logTheTeam();
+
+const logTheTeamAlternate = (targetSize = 4) => {
+    if (pokemonTeam.length == targetSize) {
+        console.log(`There are ${targetSize} pokemon in the team`);
+    }
+    if (pokemonTeam.length === targetSize) {
+        console.log("This is from strict equals")
+    }
+}
+logTheTeamAlternate();
+logTheTeamAlternate(2);
