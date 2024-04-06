@@ -128,3 +128,56 @@ const logTheTeamAlternate = (targetSize = 4) => {
 }
 logTheTeamAlternate();
 logTheTeamAlternate(2);
+
+function someSmellyFunction() {
+    let smellStrength = 10;
+
+    let smellTotalStrength = (baseStrength, multiplier) => {
+        return baseStrength * multiplier
+    }
+
+    return smellTotalStrength(smellStrength, 10);
+    // same as return 100
+}
+
+// console.log(smellStrength);
+// console.log(someSmellyFunction());
+
+let person = {
+    name: "dillon",
+    greeting: (message) => {
+        console.log("Hello! I have a message for you: ");
+        console.log(message)
+    },
+    farewell: (message) => {
+        console.log("Bye bye! Here are come parting words: ");
+        console.log(message);
+    },
+    dance: (dance) => {
+        console.log("I'm gonna dance!");
+        person.dance();
+    },
+    listFavouritePokemon: (pokemonList, formatFunction) =>{
+        console.log(`Hi, I have some favourite Pokemon to share. They are: `);
+        formatFunction(pokemonList);
+    } 
+}
+
+function improvedTeamLogging(pokemonTeam) {
+    let sortedReversedTeam = pokemonTeam.sort().reverse();
+    sortedReversedTeam.forEach(pokemonName => {
+        console.log(pokemonName)
+    });
+}
+
+// person.greeting("message");
+// person.farewell("otherMessage");
+// person.dance();
+
+person.listFavouritePokemon(
+    [
+        "pikachu", 
+        "blastoise", 
+        "mew"
+    ], 
+    improvedTeamLogging)
